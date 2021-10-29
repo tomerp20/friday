@@ -1,11 +1,8 @@
 import './App.css';
 import Avromi  from "./components/Avromi"
+import Yarden from './components/Yarden';
 
-import {
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Switch, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
@@ -30,21 +27,15 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/raziel">
-            Raziel
-          </Route>
+          <Route path="/raziel">Raziel</Route>
           <Route path="/yarden">
-            Yarden
+            <Yarden />
           </Route>
-          <Route path="/yaniv">
-           Yaniv
+          <Route path="/yaniv">Yaniv</Route>
+          <Route path="/avrumi">Avrumi
+          <Avromi/>
           </Route>
-          <Route path="/avrumi">
-           <Avromi/>
-          </Route>
-          <Route path="/aiden">
-            Aiden
-          </Route>
+          <Route path="/aiden">Aiden</Route>
         </Switch>
       </div>
     </div>
