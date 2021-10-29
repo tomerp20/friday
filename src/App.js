@@ -1,4 +1,5 @@
 import './App.css';
+import Avromi  from "./components/Avromi"
 
 import {
   Switch,
@@ -39,7 +40,7 @@ function App() {
            Yaniv
           </Route>
           <Route path="/avrumi">
-            Avrumi
+           <Avromi/>
           </Route>
           <Route path="/aiden">
             Aiden
