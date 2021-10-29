@@ -1,5 +1,5 @@
 import './App.css';
-
+import Yaniv from './components/yaniv';
 import {
   Switch,
   Route,
@@ -36,7 +36,7 @@ function App() {
             Yarden
           </Route>
           <Route path="/yaniv">
-           Yaniv
+           <Yaniv />
           </Route>
           <Route path="/avrumi">
             Avrumi
@@ -49,5 +49,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
