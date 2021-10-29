@@ -1,6 +1,43 @@
 .App {
-  text-align: center;
+ display: flex;
+ flex-direction: row;
+ width: 70%;
+ margin: auto;
 }
+.content {
+  width: 80%;
+  text-align: center;
+  margin-top: 20px;
+}
+.nav {
+  width: 20%;
+}
+.circle{
+  counter-reset: list-counter;
+  list-style: none;
+  float:left;
+}
+.circle li{
+  margin: 1.5em 0;    
+}
+.circle li:before{
+  content: counter(list-counter);
+  counter-increment: list-counter;
+  width: 1em;
+  height: 1em;
+  padding: .5em;
+  margin-right: 1em;
+  border-radius: 50%;
+  border: .25em solid #ccc;
+  background: #000;
+  color: #fff;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  
+}
+
  
 .App-logo {
   height: 40vmin;
