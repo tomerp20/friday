@@ -5,6 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Efraim from "./components/efraim"
+import Yarden from './components/Yarden';
 function App() {
   return (
     <div className="App">
@@ -29,9 +31,7 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/raziel">
-            Raziel
-          </Route>
+          <Route path="/raziel">Raziel</Route>
           <Route path="/yarden">
             Yarden
           </Route>
@@ -42,8 +42,12 @@ function App() {
             Avrumi
           </Route>
           <Route path="/aiden">
-            Aiden
+            <Efraim />
+            <Yarden />
           </Route>
+          <Route path="/yaniv">Yaniv</Route>
+          <Route path="/avrumi">Avrumi</Route>
+          <Route path="/aiden">Aiden</Route>
         </Switch>
       </div>
     </div>
