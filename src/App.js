@@ -1,5 +1,4 @@
 import './App.css';
-
 import {
   Switch,
   Route,
@@ -8,9 +7,8 @@ import {
 function App() {
   return (
     <div className="App">
-      <div>
-        <nav>
-          <ul className="list-style">
+        <div className="nav">
+          <ul className="circle">
             <li>
               <Link to="/raziel">Raziel</Link>
             </li>
@@ -27,26 +25,27 @@ function App() {
               <Link to="/aiden">Aiden</Link>
             </li>
           </ul>
-        </nav>
-        <Switch>
-          <Route path="/raziel">
-            Raziel
-          </Route>
-          <Route path="/yarden">
-            Yarden
-          </Route>
-          <Route path="/yaniv">
-           Yaniv
-          </Route>
-          <Route path="/avrumi">
-            Avrumi
-          </Route>
-          <Route path="/aiden">
-            Aiden
-          </Route>
-        </Switch>
+        </div>
+        <div className="content">
+          <Switch>
+            <Route path="/raziel">
+              Raziel
+            </Route>
+            <Route path="/yarden">
+              Yarden
+            </Route>
+            <Route path="/yaniv">
+            Yaniv
+            </Route>
+            <Route path="/avrumi">
+              Avrumi
+            </Route>
+            <Route path="/aiden">
+              Aiden
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
   );
 }
 
