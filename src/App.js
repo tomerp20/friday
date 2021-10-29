@@ -1,5 +1,5 @@
 import './App.css';
-
+import {Raziel}  from './components/Raziel'
 import {
   Switch,
   Route,
@@ -30,7 +30,7 @@ function App() {
         </nav>
         <Switch>
           <Route path="/raziel">
-            Raziel
+           <Raziel/>
           </Route>
           <Route path="/yarden">
             Yarden
