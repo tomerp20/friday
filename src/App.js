@@ -1,9 +1,12 @@
 import './App.css';
+import Yaniv from './components/yaniv';
 import {
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import Efraim from "./components/efraim"
+import Yarden from './components/Yarden';
 function App() {
   return (
     <div className="App">
@@ -26,27 +29,26 @@ function App() {
             </li>
           </ul>
         </div>
-        <div className="content">
-          <Switch>
-            <Route path="/raziel">
-              Raziel
-            </Route>
-            <Route path="/yarden">
-              Yarden
-            </Route>
-            <Route path="/yaniv">
-            Yaniv
-            </Route>
-            <Route path="/avrumi">
-              Avrumi
-            </Route>
-            <Route path="/aiden">
-              Aiden
-            </Route>
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/raziel">Raziel</Route>
+          <Route path="/yarden">
+            <Yarden />
+          </Route>
+          <Route path="/yaniv">
+           <Yaniv />
+          </Route>
+          <Route path="/avrumi">
+            Avrumi
+          </Route>
+          <Route path="/aiden">
+            <Efraim />
+          </Route>
+          <Route path="/yaniv">Yaniv</Route>
+          <Route path="/avrumi">Avrumi</Route>
+          <Route path="/aiden">Aiden</Route>
+        </Switch>
       </div>
   );
 }
-
+ 
 export default App;
