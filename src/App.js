@@ -1,7 +1,5 @@
 import './App.css';
-<<<<<<< HEAD
 import Avromi  from "./components/Avromi"
-=======
 import Yaniv from './components/yaniv';
 import {
   Switch,
@@ -9,7 +7,6 @@ import {
   Link
 } from "react-router-dom";
 import Efraim from "./components/efraim"
->>>>>>> 9cf265ae210737141de6ee1d41f01a64213cc0af
 import Yarden from './components/Yarden';
 function App() {
   return (
