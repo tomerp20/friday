@@ -1,72 +1,38 @@
-function Efraim () {
-    function hasClassName(inElement, inClassName)
-    {
-        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
-        return regExp.test(inElement.className);
-    }
-
-    function addClassName(inElement, inClassName)
-    {
-        if (!hasClassName(inElement, inClassName))
-            inElement.className = [inElement.className, inClassName].join(' ');
-    }
-
-    function removeClassName(inElement, inClassName)
-    {
-        if (hasClassName(inElement, inClassName)) {
-            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
-            var curClasses = inElement.className;
-            inElement.className = curClasses.replace(regExp, ' ');
-        }
-    }
-
- 
-
-    // function toggleShape()
-    // {
-    //   var shape = document.getElementById('shape');
-    //   if (hasClassName(shape, 'ring')) {
-    //     removeClassName(shape, 'ring');
-    //     addClassName(shape, 'cube');
-    //   } else {
-    //     removeClassName(shape, 'cube');
-    //     addClassName(shape, 'ring');
-    //   }
-      
-    //   // Move the ring back in Z so it's not so in-your-face.
-    //   var stage = document.getElementById('stage');
-    //   if (hasClassName(shape, 'ring'))
-    //     stage.style.webkitTransform = 'translateZ(-200px)';
-    //   else
-    //     stage.style.webkitTransform = '';
-    // }
-    
-   
-   
-
-        return <div className="efraim"> <div className="controls">
-    
-
-      </div>
-    
-      <div id="container">
-        <div id="stage">
-          <div id="shape" class="cube backfaces">
-            <div className="plane one">1</div>
-            <div className="plane two">2</div>
-            <div className="plane three">3</div>
-            <div className="plane four">4</div>
-            <div className="plane five">5</div>
-            <div className="plane six">6</div>
-            <div className="plane seven">7</div>
-            <div className="plane eight">8</div>
-            <div className="plane nine">9</div>
-            <div className="plane ten">10</div>
-            <div className="plane eleven">11</div>
-            <div className="plane twelve">12</div>
-          </div>
-        </div>
-      </div>
-      </div>
-}
-export default Efraim
+import * as React from 'react';
+import './efraim.css'
+import Cube from 'react-3d-cube';
+class LogoCube extends React.Component {
+    render() {
+      return (
+      <center>
+              <div>
+                  <div
+                      style={{
+                          width: 300,
+                          height: 300
+                      }}
+                  >
+                  <Cube size={300} index="front">
+                      <div >
+                          <img style={{width: '300px', height: '300px'}} src="https://i.guim.co.uk/img/media/f9aa3102e5034e03db357bfa18665b439e77a43c/0_261_4314_2589/master/4314.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=6395966753a631e965a8d070e930eede"></img>
+                      </div>
+                      <div >
+                          <img style={{width: '300px', height: '300px'}} src="https://www.thesenior.com.au/images/transform/v1/crop/frm/silverstone-feed-data/213ae3d0-5afe-4881-9259-9b24b2312c63.jpg/r0_0_800_600_w1200_h678_fmax.jpg"></img>
+                      </div>
+                      <div >
+                          <img style={{width: '300px', height: '300px'}} src="https://resources.afl.com.au/photo-resources/2021/08/07/13d674c6-a2d4-428f-bffa-00f69f98f53c/uE63Dp7c.jpg?width=952&height=592"></img>
+                      </div>
+                      <div >
+                          <img style={{width: '300px', height: '300px'}} src="https://www.comparetv.com.au/wp-content/uploads/2019/03/richmond-tigers-1.jpg"></img>
+                      </div>
+                      <div >
+                          <img style={{width: '300px', height: '300px'}} src="https://www.redlandcitybulletin.com.au/images/transform/v1/crop/frm/silverstone-feed-data/9902aa41-5229-475c-8a83-a35722386575.jpg/r0_0_800_600_w1200_h678_fmax.jpg"></img>
+                      </div>
+                      <div >
+                          <img style={{width: '300px', height: '300px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcjbA-BkyxCgWgzyNmVPejuDURgQ5mUEFj3EpEQfPU6_nVp16MKH5TI0zAWEZx81nl2wY&usqp=CAU"></img>
+                      </div>
+                  </Cube>
+                  </div>
+              </div>
+          </center>)}}
+export default LogoCube
